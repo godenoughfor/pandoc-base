@@ -1,0 +1,14 @@
+format: html5
+s:
+bibliography: /Users/Godoy/Documents/library.bib
+css: /Users/Godoy/.pandoc/templates/article.css
+template: /Users/Godoy/.pandoc/templates/html.template
+o: output.html
+
+format: latex
+s:
+S:
+latex-engine: xelatex
+bibliography: /Users/Godoy/Documents/library.bib
+template: /Users/Godoy/.pandoc/templates/beautiful-report-xelatex.template
+o: output.tex

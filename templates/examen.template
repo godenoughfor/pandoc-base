@@ -1,5 +1,5 @@
 %!TEX TS-program = pdflatexi
-\documentclass[11pt]{exam}
+\documentclass[answers,addpoints,11pt]{exam}
 % \usepackage[autoenlargeheadfoot=true]{scrlayer-scrpage}
 % The declaration of the document class:
 
@@ -393,6 +393,7 @@ $instrucciones$}}}
 $endif$
 
 
+
 $if(toc)$
 \tableofcontents
 
@@ -403,22 +404,22 @@ $if(alignment)$
 \begin{$alignment$}
 $endif$
 
-$if(anecdota)$
- \begin{table}[h]
-    \begin{tabular}{|p{1\linewidth}|}
-    \hline
-    \textsf{\textbf{Fecha y lugar de inicio:}} $inicio$  \\ \hline
-    \textsf{\textbf{Fecha y lugar de finalización:}} $fin$ \\ \hline
-    \textsf{\textbf{Contexto:}} $contexto$               \\ \hline
-    \textsf{\textbf{Hechos:}} $hechos$                    \\ \hline
-    \textsf{\textbf{Observador:}} $observador$          \\ \hline
-    \textsf{\textbf{Observaciones:}} $observaciones$      \\ \hline
-    \textsf{\textbf{Consecuencias:}} $consecuencias$    \\ \hline
-    \end{tabular}
-\end{table}
-$endif$
-
 $body$
+
+$for(multipreg)$
+\begin{questions}
+\question
+$multipreg$
+\begin{choices}
+$if(multipreg.elec)$
+\choice $multipreg.elec$
+$endif$
+$if(multipreg.corr)$
+\Correct$multipreg.corr$
+$endif$
+\end{choices}
+\end{questions}
+$endfor$
 
 %$if(alignment)$
 \end{$alignment$}

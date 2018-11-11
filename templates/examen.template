@@ -16,6 +16,20 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+\usepackage{tabularx}
+
+\newcounter{matchleft}
+\newcounter{matchright}
+
+\newenvironment{matchtabular}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    >{\leavevmode\hbox to 1.25em{\stepcounter{matchleft}\arabic{matchleft}.}}X%
+    >{\leavevmode\hbox to 1.25em{\stepcounter{matchright}\alph{matchright})}}X%
+    }%
+}{\endtabularx}
+
 \usepackage[spanish]{babel}
 
 % Hyphenation rules
@@ -198,7 +212,7 @@
 \centering
   \makebox[0pt]{%
     \begin{tabular}{|l|l|l|l|l|l|}
-    \multicolumn{3}{@{}l}{\includegraphics[height=24pt]{/home/godoy/Dropbox/labora.png}} &
+    \multicolumn{3}{@{}l}{\includegraphics[height=24pt]{/Users/godoy/Dropbox/labora.png}} &
       \multicolumn{2}{l}{\begin{tabular}[b]{@{}l@{}}$certificadoNum$\\$certificadoNom$\end{tabular}} &
       \multicolumn{1}{r@{}}{\thepage(\pageref{LastPage})} \\
     \hline
@@ -392,8 +406,6 @@ $instrucciones$}}}
 \end{center}
 $endif$
 
-
-
 $if(toc)$
 \tableofcontents
 $endif$
@@ -401,7 +413,7 @@ $endif$
 
 $if(alignment)$
 \begin{$alignment$}
-% $endif$
+$endif$
 
 $body$
 

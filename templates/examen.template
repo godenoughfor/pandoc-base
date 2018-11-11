@@ -396,34 +396,17 @@ $endif$
 
 $if(toc)$
 \tableofcontents
-
 $endif$
 
 
 $if(alignment)$
 \begin{$alignment$}
-$endif$
+% $endif$
 
 $body$
-
-$for(multipreg)$
-\begin{questions}
-\question
-$multipreg$
-\begin{choices}
-$if(multipreg.elec)$
-\choice $multipreg.elec$
-$endif$
-$if(multipreg.corr)$
-\Correct$multipreg.corr$
-$endif$
-\end{choices}
-\end{questions}
-$endfor$
 
 %$if(alignment)$
 \end{$alignment$}
 $endif$
-
 
 \end{document}

@@ -2,7 +2,7 @@
 \documentclass[answers,addpoints,11pt]{exam}
 % \usepackage[autoenlargeheadfoot=true]{scrlayer-scrpage}
 % The declaration of the document class:
-
+\pointpoints{punto}{puntos}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
@@ -16,6 +16,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+\usepackage{longtable}
+\usepackage{booktabs}
 \usepackage{tabularx}
 
 \newcounter{matchleft}

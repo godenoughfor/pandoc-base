@@ -1,7 +1,11 @@
 %!TEX TS-program = pdflatex
 \documentclass[11pt]{scrartcl}
-
+\usepackage{rotating}
 % The declaration of the document class:
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}

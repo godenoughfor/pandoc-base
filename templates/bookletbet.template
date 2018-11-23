@@ -472,17 +472,18 @@ $endif$
 
 % Nowadays LaTeX can handle all of this with another half million macros:
 
-% \usepackage[breaklinks=true]{hyperref}
-% \hypersetup{colorlinks,%
-% citecolor=blue,%
-% filecolor=blue,%
-% linkcolor=blue,%
-% urlcolor=blue}
+\usepackage[breaklinks=true]{hyperref}
+\hypersetup{colorlinks,%
+citecolor=blue,%
+filecolor=blue,%
+linkcolor=blue,%
+urlcolor=blue}
 $if(url)$
 \usepackage{url}
 $endif$
 
-
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % Images. 
 % In ye olde LaTeX one could only import a limited range of image

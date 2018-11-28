@@ -196,7 +196,7 @@
     \makebox[0pt]{%
         \begin{tabular}{cc|c|}
 		\cline{3-3}
- 		\raisebox{-.5\height}{\includegraphics[height=$lheight$]{$logo1$}} & \raisebox{-.5\height}{\includegraphics[height=$lheight$]{$logo2$}} & \begin{tabular}[c]{@{}c@{}}\textbf{ASIGNATURA: CONTENIDOS AVANZADOS} \\ \textbf{EN PSICOLOGÍA DE LAS ORGANIZACIONES.} \\\textbf{Dr. José Pedro Alfonso Pérez.}\\\textbf{Dpto. Psicología de la Salud}\end{tabular}  \\
+ 		\raisebox{-.5\height}{\includegraphics[height=$lheight$]{$logo1$}} & \raisebox{-.5\height}{\includegraphics[height=$lheight$]{$logo2$}} & \begin{tabular}[c]{@{}c@{}}\textbf{ASIGNATURA: $asig1$} \\ \textbf{$asig2$} \\\textbf{$profesor$}\\\textbf{Dpto. $departamento$}\end{tabular}  \\
 		\cline{3-3}
 		\end{tabular}
 }}
